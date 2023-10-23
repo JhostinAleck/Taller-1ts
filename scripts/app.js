@@ -20,7 +20,8 @@ function displaySeriesDetail(serie) {
 series.forEach(function (serie) {
     var row = tableBody.insertRow();
     row.insertCell(0).textContent = serie.id.toString();
-    row.insertCell(1).textContent = serie.name;
+    // add an href to the name
+    row.insertCell(1).innerHTML = "<a href=\"".concat(serie.link, "\" target=\"_blank\">").concat(serie.name, "</a>");
     row.insertCell(2).textContent = serie.channel;
     row.insertCell(3).textContent = serie.seasons.toString();
     totalSeasons += serie.seasons;
