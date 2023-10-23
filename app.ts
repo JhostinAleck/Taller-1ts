@@ -37,7 +37,9 @@ series.forEach(serie => {
     totalSeasons += serie.seasons;
     row.addEventListener('click', () => {
         displaySeriesDetail(serie);
-    });
+    }); 
+
+    
 });
 
 const averageSeasons = totalSeasons / series.length;
